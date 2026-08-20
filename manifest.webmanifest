@@ -2,13 +2,13 @@
   "name": "MetaMap",
   "short_name": "MetaMap",
   "description": "Il numero giusto, ogni giorno.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#211927",
   "theme_color": "#211927",
   "orientation": "portrait",
   "icons": [
-    { "src": "/assets/logo-3d.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "/assets/logo-3d.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    { "src": "./assets/logo-3d.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/logo-3d.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
