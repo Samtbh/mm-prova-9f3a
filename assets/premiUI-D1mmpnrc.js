@@ -1,5 +1,5 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./index-DILr5A0X.js","./index-DwBjqQd2.css"])))=>i.map(i=>d[i]);
-import{x as R,_ as Z}from"./index-DILr5A0X.js";const f=[{livello:1,nome:"Presenza",colore:"#a4663c",chiaro:"#e8a973"},{livello:2,nome:"Costanza",colore:"#7c8794",chiaro:"#eef3f8"},{livello:3,nome:"Metodo",colore:"#c9962b",chiaro:"#ffe9a3"},{livello:4,nome:"Lucidità",colore:"#5ec8d8",chiaro:"#ecfbff"},{livello:5,nome:"Padronanza",colore:"#2f6fd0",chiaro:"#7fc4ff"}],Y=`<path d="M15.5 34.5c-5-1.6-8.2-5.6-8.8-11 2.4.6 4.2 1.8 5.4 3.6-1.2-3-1-5.8.6-8.4
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./index-hiScnj4q.js","./index-CmEEG52E.css"])))=>i.map(i=>d[i]);
+import{x as S,_ as Z}from"./index-hiScnj4q.js";const f=[{livello:1,nome:"Presenza",colore:"#a4663c",chiaro:"#e8a973"},{livello:2,nome:"Costanza",colore:"#7c8794",chiaro:"#eef3f8"},{livello:3,nome:"Metodo",colore:"#c9962b",chiaro:"#ffe9a3"},{livello:4,nome:"Lucidità",colore:"#5ec8d8",chiaro:"#ecfbff"},{livello:5,nome:"Padronanza",colore:"#2f6fd0",chiaro:"#7fc4ff"}],Y=`<path d="M15.5 34.5c-5-1.6-8.2-5.6-8.8-11 2.4.6 4.2 1.8 5.4 3.6-1.2-3-1-5.8.6-8.4
             2 1.6 3.1 3.6 3.3 6-.4-3 .5-5.6 2.6-7.8 1.3 2.3 1.6 4.7.9 7.2"
          fill="none" stroke="url(#F)" stroke-width="2" stroke-linecap="round"/>`,G=`<path d="M32.5 34.5c5-1.6 8.2-5.6 8.8-11-2.4.6-4.2 1.8-5.4 3.6 1.2-3 1-5.8-.6-8.4
             -2 1.6-3.1 3.6-3.3 6 .4-3-.5-5.6-2.6-7.8-1.3 2.3-1.6 4.7-.9 7.2"
@@ -32,9 +32,9 @@ import{x as R,_ as Z}from"./index-DILr5A0X.js";const f=[{livello:1,nome:"Presenz
    <path d="M19.2 19.3c1.8-.5 3.4.4 3.9 1.9.5 1.6-.6 3-2.3 3.4-1.8.4-3.4-.7-3.8-2.3-.3-1.4.5-2.6 2.2-3Z"
          fill="#150e19"/>
    <path d="M28.8 19.3c-1.8-.5-3.4.4-3.9 1.9-.5 1.6.6 3 2.3 3.4 1.8.4 3.4-.7 3.8-2.3.3-1.4-.5-2.6-2.2-3Z"
-         fill="#150e19"/>`,N=`<path d="M24 4.2 40 9.4v12.2c0 8.4-6.6 14.6-16 18.4C14.6 36.2 8 30 8 21.6V9.4Z"
+         fill="#150e19"/>`,g=`<path d="M24 4.2 40 9.4v12.2c0 8.4-6.6 14.6-16 18.4C14.6 36.2 8 30 8 21.6V9.4Z"
          fill="none" stroke="currentColor" stroke-width="1.8"
-         stroke-dasharray="4 4" opacity=".45"/>`;let g=0;function u(t,o=40){const i=Math.max(0,Math.min(f.length,Math.round(t)))-1,e=f[i],a=`gd${t}_${++g}`,l=(e?t===5&&o<56?H:T[i]:N).replace(/url\(#F\)/g,`url(#${a}f)`).replace(/url\(#B\)/g,`url(#${a}b)`).replace(/url\(#IRIDE\)/g,`url(#${a}i)`).replace(/id="CLIP"/g,`id="${a}c"`).replace(/url\(#CLIP\)/g,`url(#${a}c)`);return`<svg class="gr-em" viewBox="0 0 48 48" width="${o}" height="${o}" aria-hidden="true">
+         stroke-dasharray="4 4" opacity=".45"/>`;let N=0;function u(t,o=40){const i=Math.max(0,Math.min(f.length,Math.round(t)))-1,e=f[i],a=`gd${t}_${++N}`,l=(e?t===5&&o<56?H:T[i]:g).replace(/url\(#F\)/g,`url(#${a}f)`).replace(/url\(#B\)/g,`url(#${a}b)`).replace(/url\(#IRIDE\)/g,`url(#${a}i)`).replace(/id="CLIP"/g,`id="${a}c"`).replace(/url\(#CLIP\)/g,`url(#${a}c)`);return`<svg class="gr-em" viewBox="0 0 48 48" width="${o}" height="${o}" aria-hidden="true">
     <defs>
       <linearGradient id="${a}f" x1="0" y1="0" x2="0.4" y2="1">
         <stop offset="0" stop-color="${e?.chiaro??"#8a8a8a"}"/>
@@ -54,11 +54,11 @@ import{x as R,_ as Z}from"./index-DILr5A0X.js";const f=[{livello:1,nome:"Presenz
       </linearGradient>
     </defs>
     ${l}
-  </svg>`}const v=t=>f[t-1]?.colore??"var(--muted-2)",h=t=>document.getElementById(t),s=t=>String(Math.round(t)).replace(/\B(?=(\d{3})+(?!\d))/g,".");let z=null;const P=()=>z,p=[19,23,28,33,39];function x(t){const o=h("premioBox");if(!o)return;o.style.display="";const i=t.scala,e=i.length,a=t.prossimo;let r=0;for(const n of i)t.punti>=n.soglia&&r++;const l=r?i[r-1].soglia:0,M=i[r]?.soglia??l,k=M>l?Math.max(0,Math.min(1,(t.punti-l)/(M-l))):1,m=n=>7+Math.max(0,Math.min(1,n))*86,b=m((r+k)/e),E=i.map((n,c)=>{const I=t.punti>=n.soglia,S=m((c+1)/e);return`<span class="pv-nodo${I?" preso":""}" style="left:${S}%;--c:${v(n.livello)}"
-                    title="${n.nome} · ${s(n.soglia)} punti">
-                ${I?u(n.livello,p[c]):`<i class="pv-vuoto" style="width:${p[c]}px;height:${p[c]}px"></i>`}
-                <em>${s(n.soglia)}</em>
-              </span>`}).join(""),O=i.some(n=>n.soglia===t.punti)||t.punti===0;o.style.display="",o.className="pvia",o.innerHTML=`<span class="pv-linea"></span>
+  </svg>`}const v=t=>f[t-1]?.colore??"var(--muted-2)",h=t=>document.getElementById(t),s=t=>String(Math.round(t)).replace(/\B(?=(\d{3})+(?!\d))/g,".");let z=null;const j=()=>z,p=[19,23,28,33,39];function x(t){const o=h("premioBox");if(!o)return;o.style.display="";const i=t.scala,e=i.length,a=t.prossimo;let n=0;for(const r of i)t.punti>=r.soglia&&n++;const l=n?i[n-1].soglia:0,m=i[n]?.soglia??l,k=m>l?Math.max(0,Math.min(1,(t.punti-l)/(m-l))):1,M=r=>7+Math.max(0,Math.min(1,r))*86,b=M((n+k)/e),E=i.map((r,c)=>{const I=t.punti>=r.soglia,R=M((c+1)/e);return`<span class="pv-nodo${I?" preso":""}" style="left:${R}%;--c:${v(r.livello)}"
+                    title="${r.nome} · ${s(r.soglia)} punti">
+                ${I?u(r.livello,p[c]):`<i class="pv-vuoto" style="width:${p[c]}px;height:${p[c]}px"></i>`}
+                <em>${s(r.soglia)}</em>
+              </span>`}).join(""),O=i.some(r=>r.soglia===t.punti)||t.punti===0;o.style.display="",o.className="pvia",o.innerHTML=`<span class="pv-linea"></span>
      <span class="pv-nodo via" style="left:7%">
        <i class="pv-zero"></i><em>0</em>
      </span>
@@ -66,7 +66,7 @@ import{x as R,_ as Z}from"./index-DILr5A0X.js";const f=[{livello:1,nome:"Presenz
      <span class="pv-io" style="left:${b.toFixed(1)}%">
        <i class="pv-punta"></i>
        ${O?"":`<em>${s(t.punti)}</em>`}
-     </span>`,o.title=a?`${t.nome??"Nessun grado"} → ${a.nome}: ${s(a.mancano)} punti`:`${t.nome} — il grado più alto`}function X(t){const o=h("premiBox");if(!o)return;const i=t.scala.map(e=>{const a=t.punti>=e.soglia,r=t.prossimo?.livello===e.livello;return`<div class="pr-row${a?" preso":""}${r?" ora":""}">
+     </span>`,o.title=a?`${t.nome??"Nessun grado"} → ${a.nome}: ${s(a.mancano)} punti`:`${t.nome} — il grado più alto`}function X(t){const o=h("premiBox");if(!o)return;const i=t.scala.map(e=>{const a=t.punti>=e.soglia,n=t.prossimo?.livello===e.livello;return`<div class="pr-row${a?" preso":""}${n?" ora":""}">
         <span class="pr-n">${u(e.livello,34)}</span>
         <div class="t"><b>${e.nome}</b><span>${s(e.soglia)} punti</span></div>
         <span class="pr-pz">${a?"preso":"da prendere"}</span>
@@ -83,12 +83,16 @@ import{x as R,_ as Z}from"./index-DILr5A0X.js";const f=[{livello:1,nome:"Presenz
         <span><b>+10</b> ogni 7 di fila</span>
       </div>
       ${i}
-    </div>`}function W(t){const o=t[t.length-1],i=t.reduce((r,l)=>r+l.letture,0),e=document.createElement("div");e.className="festa",e.innerHTML=`<div class="festa-box gf-box" style="--c:${v(o.livello)}">
+    </div>`}const W={1:[{cosa:"L'archivio con i filtri",dove:"Ciclo → Archivio"}],2:[{cosa:"I grammi per chilo del ciclo",dove:"Ciclo → Impostazioni"}],3:[{cosa:"La lettura del tuo periodo",dove:"Altro → La lettura"}],4:[{cosa:"Il confronto settimana su settimana",dove:"Ciclo → Come sta andando"}],5:[{cosa:"L'emblema che non si compra",dove:"sul tuo profilo"}]};function y(t,o){const i=t.flatMap(e=>(W[e.livello]??[]).map(a=>`<li><b>${a.cosa}</b><span>${a.dove}</span></li>`));return o&&i.push(`<li><b>${o} letture del cibo</b><span>in cassa, non scadono</span></li>`),i.length?`<div class="gf-regali">
+    <span class="gf-lb">Da adesso puoi</span>
+    <ul>${i.join("")}</ul>
+  </div>`:""}function P(t){const o=t[t.length-1],i=t.reduce((n,l)=>n+l.letture,0),e=document.createElement("div");e.className="festa",e.innerHTML=`<div class="festa-box gf-box" style="--c:${v(o.livello)}">
       <div class="gf-raggi"></div>
-      <div class="festa-fx">${Array.from({length:18}).map((r,l)=>`<i style="--a:${l*20}deg;--d:${l%5*60}ms"></i>`).join("")}</div>
+      <div class="festa-fx">${Array.from({length:18}).map((n,l)=>`<i style="--a:${l*20}deg;--d:${l%5*60}ms"></i>`).join("")}</div>
       <div class="gf-em">${u(o.livello,92)}</div>
       <b>${o.nome}</b>
       <span>Grado raggiunto</span>
-      <p>${i?`Hai sbloccato <b>${i} letture del cibo</b>. Sono in cassa: non scadono.`:"Preso chiudendo le giornate, una dopo l'altra. Non si compra."}</p>
+      <p>Preso chiudendo le giornate, una dopo l'altra. Non si compra.</p>
+      ${y(t,i)}
       <button class="btn">Bene</button>
-    </div>`,document.body.appendChild(e),requestAnimationFrame(()=>e.classList.add("on"));const a=()=>{e.classList.remove("on"),window.setTimeout(()=>e.remove(),320)};e.querySelector("button").onclick=a,e.onclick=r=>{r.target===e&&a()}}async function V(){const t=await R("premi",{});if(!(!t||typeof t.punti!="number")&&(z=t,window.dispatchEvent(new CustomEvent("mm2:premi",{detail:t})),x(t),X(t),t.appenaVinti?.length)){W(t.appenaVinti);const o=await Z(()=>import("./index-DILr5A0X.js").then(i=>i.L),__vite__mapDeps([0,1]),import.meta.url);await o.caricaUso(),window.MetaMap.paintUso?.(o.usoCibo())}}export{V as paintPremi,P as premi};
+    </div>`,document.body.appendChild(e),requestAnimationFrame(()=>e.classList.add("on"));const a=()=>{e.classList.remove("on"),window.setTimeout(()=>e.remove(),320)};e.querySelector("button").onclick=a,e.onclick=n=>{n.target===e&&a()}}async function Q(){const t=await S("premi",{});if(!(!t||typeof t.punti!="number")&&(z=t,window.dispatchEvent(new CustomEvent("mm2:premi",{detail:t})),x(t),X(t),t.appenaVinti?.length)){P(t.appenaVinti);const o=await Z(()=>import("./index-hiScnj4q.js").then(i=>i.L),__vite__mapDeps([0,1]),import.meta.url);await o.caricaUso(),window.MetaMap.paintUso?.(o.usoCibo())}}export{Q as paintPremi,j as premi};
