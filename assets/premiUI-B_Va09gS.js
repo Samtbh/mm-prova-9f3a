@@ -1,5 +1,5 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./index-BETpLty-.js","./index-BfOMIe0x.css"])))=>i.map(i=>d[i]);
-import{x as S,_ as R}from"./index-BETpLty-.js";const f=[{livello:1,nome:"Presenza",colore:"#a4663c",chiaro:"#e8a973"},{livello:2,nome:"Costanza",colore:"#7c8794",chiaro:"#eef3f8"},{livello:3,nome:"Metodo",colore:"#c9962b",chiaro:"#ffe9a3"},{livello:4,nome:"Lucidità",colore:"#5ec8d8",chiaro:"#ecfbff"},{livello:5,nome:"Padronanza",colore:"#2f6fd0",chiaro:"#7fc4ff"}],Z=`<path d="M15.5 34.5c-5-1.6-8.2-5.6-8.8-11 2.4.6 4.2 1.8 5.4 3.6-1.2-3-1-5.8.6-8.4
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./index-DltX2XKJ.js","./index-BfOMIe0x.css"])))=>i.map(i=>d[i]);
+import{x as S,_ as R}from"./index-DltX2XKJ.js";const f=[{livello:1,nome:"Presenza",colore:"#a4663c",chiaro:"#e8a973"},{livello:2,nome:"Costanza",colore:"#7c8794",chiaro:"#eef3f8"},{livello:3,nome:"Metodo",colore:"#c9962b",chiaro:"#ffe9a3"},{livello:4,nome:"Lucidità",colore:"#5ec8d8",chiaro:"#ecfbff"},{livello:5,nome:"Padronanza",colore:"#2f6fd0",chiaro:"#7fc4ff"}],Z=`<path d="M15.5 34.5c-5-1.6-8.2-5.6-8.8-11 2.4.6 4.2 1.8 5.4 3.6-1.2-3-1-5.8.6-8.4
             2 1.6 3.1 3.6 3.3 6-.4-3 .5-5.6 2.6-7.8 1.3 2.3 1.6 4.7.9 7.2"
          fill="none" stroke="url(#F)" stroke-width="2" stroke-linecap="round"/>`,Y=`<path d="M32.5 34.5c5-1.6 8.2-5.6 8.8-11-2.4.6-4.2 1.8-5.4 3.6 1.2-3 1-5.8-.6-8.4
             -2 1.6-3.1 3.6-3.3 6 .4-3-.5-5.6-2.6-7.8-1.3 2.3-1.6 4.7-.9 7.2"
@@ -34,7 +34,7 @@ import{x as S,_ as R}from"./index-BETpLty-.js";const f=[{livello:1,nome:"Presenz
    <path d="M28.8 19.3c-1.8-.5-3.4.4-3.9 1.9-.5 1.6.6 3 2.3 3.4 1.8.4 3.4-.7 3.8-2.3.3-1.4-.5-2.6-2.2-3Z"
          fill="#150e19"/>`,H=`<path d="M24 4.2 40 9.4v12.2c0 8.4-6.6 14.6-16 18.4C14.6 36.2 8 30 8 21.6V9.4Z"
          fill="none" stroke="currentColor" stroke-width="1.8"
-         stroke-dasharray="4 4" opacity=".45"/>`;let g=0;function u(t,o=40){const i=Math.max(0,Math.min(f.length,Math.round(t)))-1,e=f[i],a=`gd${t}_${++g}`,l=(e?t===5&&o<56?T:U[i]:H).replace(/url\(#F\)/g,`url(#${a}f)`).replace(/url\(#B\)/g,`url(#${a}b)`).replace(/url\(#IRIDE\)/g,`url(#${a}i)`).replace(/id="CLIP"/g,`id="${a}c"`).replace(/url\(#CLIP\)/g,`url(#${a}c)`);return`<svg class="gr-em" viewBox="0 0 48 48" width="${o}" height="${o}" aria-hidden="true">
+         stroke-dasharray="4 4" opacity=".45"/>`;let N=0;function u(t,o=40){const i=Math.max(0,Math.min(f.length,Math.round(t)))-1,e=f[i],a=`gd${t}_${++N}`,l=(e?t===5&&o<56?T:U[i]:H).replace(/url\(#F\)/g,`url(#${a}f)`).replace(/url\(#B\)/g,`url(#${a}b)`).replace(/url\(#IRIDE\)/g,`url(#${a}i)`).replace(/id="CLIP"/g,`id="${a}c"`).replace(/url\(#CLIP\)/g,`url(#${a}c)`);return`<svg class="gr-em" viewBox="0 0 48 48" width="${o}" height="${o}" aria-hidden="true">
     <defs>
       <linearGradient id="${a}f" x1="0" y1="0" x2="0.4" y2="1">
         <stop offset="0" stop-color="${e?.chiaro??"#8a8a8a"}"/>
@@ -54,7 +54,7 @@ import{x as S,_ as R}from"./index-BETpLty-.js";const f=[{livello:1,nome:"Presenz
       </linearGradient>
     </defs>
     ${l}
-  </svg>`}const v=t=>f[t-1]?.colore??"var(--muted-2)",h=t=>document.getElementById(t),s=t=>String(Math.round(t)).replace(/\B(?=(\d{3})+(?!\d))/g,"."),p=[19,23,28,33,39];function N(t){const o=h("premioBox");if(!o)return;if(!t.giornate){o.style.display="none";return}const i=t.scala,e=i.length,a=t.prossimo;let r=0;for(const n of i)t.punti>=n.soglia&&r++;const l=r?i[r-1].soglia:0,M=i[r]?.soglia??l,z=M>l?Math.max(0,Math.min(1,(t.punti-l)/(M-l))):1,m=n=>7+Math.max(0,Math.min(1,n))*86,k=m((r+z)/e),b=i.map((n,c)=>{const I=t.punti>=n.soglia,O=m((c+1)/e);return`<span class="pv-nodo${I?" preso":""}" style="left:${O}%;--c:${v(n.livello)}"
+  </svg>`}const v=t=>f[t-1]?.colore??"var(--muted-2)",h=t=>document.getElementById(t),s=t=>String(Math.round(t)).replace(/\B(?=(\d{3})+(?!\d))/g,"."),p=[19,23,28,33,39];function g(t){const o=h("premioBox");if(!o)return;o.style.display="";const i=t.scala,e=i.length,a=t.prossimo;let r=0;for(const n of i)t.punti>=n.soglia&&r++;const l=r?i[r-1].soglia:0,M=i[r]?.soglia??l,z=M>l?Math.max(0,Math.min(1,(t.punti-l)/(M-l))):1,m=n=>7+Math.max(0,Math.min(1,n))*86,k=m((r+z)/e),b=i.map((n,c)=>{const I=t.punti>=n.soglia,O=m((c+1)/e);return`<span class="pv-nodo${I?" preso":""}" style="left:${O}%;--c:${v(n.livello)}"
                     title="${n.nome} · ${s(n.soglia)} punti">
                 ${I?u(n.livello,p[c]):`<i class="pv-vuoto" style="width:${p[c]}px;height:${p[c]}px"></i>`}
                 <em>${s(n.soglia)}</em>
@@ -91,4 +91,4 @@ import{x as S,_ as R}from"./index-BETpLty-.js";const f=[{livello:1,nome:"Presenz
       <span>Grado raggiunto</span>
       <p>${i?`Hai sbloccato <b>${i} letture del cibo</b>. Sono in cassa: non scadono.`:"Preso chiudendo le giornate, una dopo l'altra. Non si compra."}</p>
       <button class="btn">Bene</button>
-    </div>`,document.body.appendChild(e),requestAnimationFrame(()=>e.classList.add("on"));const a=()=>{e.classList.remove("on"),window.setTimeout(()=>e.remove(),320)};e.querySelector("button").onclick=a,e.onclick=r=>{r.target===e&&a()}}async function y(){const t=await S("premi",{});if(!(!t||typeof t.punti!="number")&&(N(t),x(t),t.appenaVinti?.length)){X(t.appenaVinti);const o=await R(()=>import("./index-BETpLty-.js").then(i=>i.J),__vite__mapDeps([0,1]),import.meta.url);await o.caricaUso(),window.MetaMap.paintUso?.(o.usoCibo())}}export{y as paintPremi};
+    </div>`,document.body.appendChild(e),requestAnimationFrame(()=>e.classList.add("on"));const a=()=>{e.classList.remove("on"),window.setTimeout(()=>e.remove(),320)};e.querySelector("button").onclick=a,e.onclick=r=>{r.target===e&&a()}}async function y(){const t=await S("premi",{});if(!(!t||typeof t.punti!="number")&&(g(t),x(t),t.appenaVinti?.length)){X(t.appenaVinti);const o=await R(()=>import("./index-DltX2XKJ.js").then(i=>i.J),__vite__mapDeps([0,1]),import.meta.url);await o.caricaUso(),window.MetaMap.paintUso?.(o.usoCibo())}}export{y as paintPremi};
