@@ -13,8 +13,8 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="apple-touch-icon" href="assets/logo-3d.png">
 <link rel="icon" href="assets/logo-3d.png">
-  <script type="module" crossorigin src="./assets/index-ULIw8w1k.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Bc984Tdz.css">
+  <script type="module" crossorigin src="./assets/index-BETpLty-.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BfOMIe0x.css">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -170,11 +170,10 @@
       <h3>Cosa hai mangiato</h3>
       <div class="card">
         <h2>Cosa hai mangiato</h2>
-        <p class="hint"><code>petto di pollo 300 grammi, riso 120 grammi</code></p>
-        <div class="chips" id="chips"></div>
+        <p class="hint">Un alimento per volta: <code>300 g petto di pollo crudo</code></p>
         <div class="field">
           <div class="wrap">
-            <input id="food" placeholder="petto di pollo 300 grammi, riso 120 grammi" autocomplete="off">
+            <input id="food" placeholder="300 g petto di pollo crudo" autocomplete="off">
             <button class="mic" id="mic" title="Detta col microfono">
               <svg viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>
             </button>
@@ -238,6 +237,20 @@
         <span><i class="lg aperto"></i>mai chiusa</span>
       </div>
       <div class="detail" id="dayDetail"></div>
+      <h3>Le impostazioni del ciclo</h3>
+      <div class="split-hd">
+        <div class="l2"><b id="splitStart">Comincia domenica 16 agosto</b>Il ciclo parte quando lo dici tu.</div>
+        <button id="splitDate">Cambia data</button>
+      </div>
+      <div class="split-hd">
+        <div class="l2"><b id="cycLen">Ciclo di 7 giorni</b>Quanti giorni prima che lo split ricominci.</div>
+        <button id="cycBtn">Cambia durata</button>
+      </div>
+      <div class="cycle-grid" id="cycGrid"></div>
+      <p class="note" style="margin-top:14px"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6a9.4 9.4 0 1 0 0 18.8 9.4 9.4 0 0 0 0-18.8Zm0 4a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6Zm1.2 11.2h-2.4v-7h2.4Z"/></svg> I nomi degli allenamenti li scrivi tu. Le calorie di ognuno restano salvate.
+      </p>
+
+
       </div>
 
       <div class="sez" id="cic-andamento">
@@ -328,19 +341,6 @@
         <div class="g-row" data-set="obiettivo"><div class="t"><b>Obiettivo</b><span>Perdere grasso · Restare così · Mettere massa</span></div><span class="val" id="valGoal">—</span><span class="ch"><svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></span></div>
         <div class="g-row" data-set="ritmo"><div class="t"><b>Di quanto</b><span>Chilocalorie al giorno da togliere o aggiungere</span></div><span class="val" id="valDelta">0 kcal</span><span class="ch"><svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></span></div>
       </div>
-      <h3>Il ciclo</h3>
-      <div class="split-hd">
-        <div class="l2"><b id="splitStart">Comincia domenica 16 agosto</b>Il ciclo parte quando lo dici tu.</div>
-        <button id="splitDate">Cambia data</button>
-      </div>
-      <div class="split-hd">
-        <div class="l2"><b id="cycLen">Ciclo di 7 giorni</b>Quanti giorni prima che lo split ricominci.</div>
-        <button id="cycBtn">Cambia durata</button>
-      </div>
-      <div class="cycle-grid" id="cycGrid"></div>
-      <p class="note" style="margin-top:14px"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6a9.4 9.4 0 1 0 0 18.8 9.4 9.4 0 0 0 0-18.8Zm0 4a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6Zm1.2 11.2h-2.4v-7h2.4Z"/></svg> I nomi degli allenamenti li scrivi tu. Le calorie di ognuno restano salvate.
-      </p>
-
       <h3>Cosa hai collegato</h3>
       <div class="conns">
         <div class="conn"><div class="logo"><svg class="lg" viewBox="13.45 20.96 93.11 18.07"><use href="#lg-strava"/></svg></div><div class="txt"><b>Strava</b><span>Allenamenti, durata, calorie</span></div><button class="btn">Collega</button></div>
