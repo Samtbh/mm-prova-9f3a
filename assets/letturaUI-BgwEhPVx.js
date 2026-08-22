@@ -1,4 +1,4 @@
-import{x as d}from"./index-DcC4eaj_.js";const l=t=>document.getElementById(t);function p(t){const o=t.trim();if(!o)return[];const i=o.split(/\n(?=#{1,3}\s)/g).map(a=>a.trim()).filter(Boolean);return(i.length>1?i:[o]).map(a=>{const n=a.split(`
+import{x as d}from"./index-ih5m91Mx.js";const l=t=>document.getElementById(t);function p(t){const o=t.trim();if(!o)return[];const i=o.split(/\n(?=#{1,3}\s)/g).map(a=>a.trim()).filter(Boolean);return(i.length>1?i:[o]).map(a=>{const n=a.split(`
 `),e=n[0].replace(/^#{1,3}\s*/,"").replace(/^\d+\.\s*/,"").trim(),c=n.slice(1).join(`
 `).replace(/^#{1,3}\s*/gm,"").trim();return c?{titolo:e,testo:c}:{titolo:"",testo:a.replace(/^#{1,3}\s*/gm,"")}}).filter(a=>(a.titolo||a.testo)&&!(!a.titolo&&a.testo.length<90))}let r=!1;const u=t=>t.split(`
 `).join("<br>").replace(/\*\*(.+?)\*\*/g,"<b>$1</b>"),b={GRADO:t=>`<b>Si apre al terzo grado.</b> Sei al ${Number(t.livello??0)||"primo passo"}${Number(t.livello??0)?"°":""}: continua a chiudere le giornate e questa pagina si accende da sola.`,REGALO_FINITO:()=>`<b>La lettura in regalo l'hai già usata.</b> Da qui in poi serve un piano:
