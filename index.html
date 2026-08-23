@@ -13,8 +13,8 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="apple-touch-icon" href="assets/logo-3d.png">
 <link rel="icon" href="assets/logo-3d.png">
-  <script type="module" crossorigin src="./assets/index-CyBvDjXu.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CQce-Rxu.css">
+  <script type="module" crossorigin src="./assets/index-bNmtL2y6.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-B1LryvMO.css">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -106,7 +106,21 @@
       <div class="eyebrow" id="oggiEyebrow">&mdash;</div>
       <div class="numrow">
         <div class="numwrap">
-          <div class="num"><span id="numVal">&mdash;</span><span class="u">kcal</span></div>
+          <div class="num"><span id="numVal">&mdash;</span><span class="u">kcal</span>
+            <!-- LA PRECISIONE DEL NUMERO sta a fianco al numero, a destra,
+                 sul computer come sul telefono. Prima era una frase lunga
+                 in fondo alla pagina; adesso e' il cerchietto e basta, e
+                 se lo tocchi si apre la cascata dei dati che mancano.
+                 Sta dentro la riga del numero e non nella colonna di
+                 fianco, perche' sotto gli 860px quella colonna scende
+                 sotto il numero e il cerchietto se ne sarebbe andato con
+                 lei. (CEO 23/08) -->
+            <button class="dial dial-num" id="precDial" aria-expanded="false"
+                    aria-controls="prec" title="Quanto e&rsquo; preciso questo numero">
+              <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true"><circle class="bgc" cx="21" cy="21" r="18"/><circle class="fg" id="precRing" cx="21" cy="21" r="18" stroke-dasharray="0 113" stroke-linecap="round"/></svg>
+              <b id="precPct">&mdash;</b>
+            </button>
+          </div>
           <div class="deb-chip" id="debChip" style="display:none"></div>
         </div>
         <div class="dx">
@@ -120,6 +134,19 @@
         <div class="lb" id="stateLb">&mdash;</div>
       </div>
       <div class="carry" id="carry" style="display:none"></div>
+
+      <!-- LA CASCATA DELLA PRECISIONE. Sta chiusa: si apre col cerchietto
+           qui sopra. Dentro, i dati che al numero ancora mancano. -->
+      <div class="prec" id="prec" hidden>
+        <div class="prec-say" id="precSub"></div>
+        <div class="body" id="precBody">
+          <button class="item" data-prec="training" data-gain="14"><span class="plus"><svg viewBox="0 0 24 24"><path d="M11 4.6h2v6.4h6.4v2H13v6.4h-2V13H4.6v-2H11Z"/></svg></span><span class="lb2"><b>L&rsquo;allenamento di oggi</b><span>Tipo e calorie &mdash; cambia anche l&rsquo;EPOC</span></span><span class="gain">+14%</span></button>
+          <button class="item" data-prec="ore" data-gain="12"><span class="plus"><svg viewBox="0 0 24 24"><path d="M11 4.6h2v6.4h6.4v2H13v6.4h-2V13H4.6v-2H11Z"/></svg></span><span class="lb2"><b>Ore da sveglio e di lavoro</b><span>Divide la giornata fra lavoro e riposo</span></span><span class="gain">+12%</span></button>
+          <button class="item" data-prec="tipi" data-gain="6"><span class="plus"><svg viewBox="0 0 24 24"><path d="M11 4.6h2v6.4h6.4v2H13v6.4h-2V13H4.6v-2H11Z"/></svg></span><span class="lb2"><b>Che lavoro fai, e come riposi</b><span>Si imposta una volta sola</span></span><span class="gain">+6%</span></button>
+          <button class="item" data-prec="passi" data-gain="5"><span class="plus"><svg viewBox="0 0 24 24"><path d="M11 4.6h2v6.4h6.4v2H13v6.4h-2V13H4.6v-2H11Z"/></svg></span><span class="lb2"><b>I passi di oggi</b><span>Da Strava, o a mano</span></span><span class="gain">+5%</span></button>
+        </div>
+        <div class="foot2">Oltre il 99% non si va.</div>
+      </div>
 
       <!-- LA COSTANZA, in alto. E' il principio del prodotto e non
            compariva sulla schermata principale: stava sepolta nei
@@ -187,23 +214,6 @@
         <p id="calc5"></p>
         <p id="calcTot"></p>
       </div>
-      <div class="prec" id="prec">
-        <div class="hd2" id="precHd">
-          <div class="dial">
-            <svg width="42" height="42" viewBox="0 0 42 42"><circle class="bgc" cx="21" cy="21" r="18"/><circle class="fg" id="precRing" cx="21" cy="21" r="18" stroke-dasharray="0 113"/></svg>
-            <b id="precPct">62%</b>
-          </div>
-          <div class="tx"><b>Il numero &egrave; preciso al <span id="precPct2">62%</span></b><span id="precSub">Bastano peso, altezza ed et&agrave;. Il resto se vuoi.</span></div>
-          <span class="arrow"><svg viewBox="0 0 24 24"><path d="M4.9 8.4h14.2a1.6 1.6 0 0 1 1.2 2.7l-7.1 7.6a1.6 1.6 0 0 1-2.4 0L3.7 11.1a1.6 1.6 0 0 1 1.2-2.7Z"/></svg></span>
-        </div>
-        <div class="body" id="precBody">
-          <button class="item" data-prec="training" data-gain="14"><span class="plus"><svg viewBox="0 0 24 24"><path d="M11 4.6h2v6.4h6.4v2H13v6.4h-2V13H4.6v-2H11Z"/></svg></span><span class="lb2"><b>L&rsquo;allenamento di oggi</b><span>Tipo e calorie &mdash; cambia anche l&rsquo;EPOC</span></span><span class="gain">+14%</span></button>
-          <button class="item" data-prec="ore" data-gain="12"><span class="plus"><svg viewBox="0 0 24 24"><path d="M11 4.6h2v6.4h6.4v2H13v6.4h-2V13H4.6v-2H11Z"/></svg></span><span class="lb2"><b>Ore da sveglio e di lavoro</b><span>Divide la giornata fra lavoro e riposo</span></span><span class="gain">+12%</span></button>
-          <button class="item" data-prec="tipi" data-gain="6"><span class="plus"><svg viewBox="0 0 24 24"><path d="M11 4.6h2v6.4h6.4v2H13v6.4h-2V13H4.6v-2H11Z"/></svg></span><span class="lb2"><b>Che lavoro fai, e come riposi</b><span>Si imposta una volta sola</span></span><span class="gain">+6%</span></button>
-          <button class="item" data-prec="passi" data-gain="5"><span class="plus"><svg viewBox="0 0 24 24"><path d="M11 4.6h2v6.4h6.4v2H13v6.4h-2V13H4.6v-2H11Z"/></svg></span><span class="lb2"><b>I passi di oggi</b><span>Da Strava, o a mano</span></span><span class="gain">+5%</span></button>
-        </div>
-        <div class="foot2">Oltre il 99% non si va.</div>
-      </div>
       <div class="percorso" id="premioBox" style="display:none"></div>
     </section>
 
@@ -267,9 +277,6 @@
 
 
       <div class="sez" id="cic-andamento">
-      <!-- LA COSTANZA IN CIMA: è la schermata dei progressi, e il
-           progresso che conta e' quello. Stessi dati di Oggi. -->
-      <div class="costanza" id="costanzaCiclo" hidden></div>
       <div class="sum">
         <div class="stat"><div class="k">Giorni in pari</div><div class="v"><span id="stOk">—</span><small id="stTot"></small></div></div>
         <div class="stat"><div class="k">Recuperati</div><div class="v" id="stRec">—</div></div>
