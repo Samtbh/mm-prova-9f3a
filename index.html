@@ -13,8 +13,8 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="apple-touch-icon" href="assets/logo-3d.png">
 <link rel="icon" href="assets/logo-3d.png">
-  <script type="module" crossorigin src="./assets/index-BVj6_0fZ.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Bs2oH-C8.css">
+  <script type="module" crossorigin src="./assets/index-CYV9IRFo.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Bl_K4nzC.css">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -103,14 +103,12 @@
 
     <!-- ══ OGGI ══ -->
     <section class="screen on" id="oggi">
-      <div class="eyebrow" id="oggiEyebrow">—</div>
+      <div class="eyebrow" id="oggiEyebrow">&mdash;</div>
       <div class="numrow">
         <div class="numwrap">
           <div class="num"><span id="numVal">&mdash;</span><span class="u">kcal</span></div>
           <div class="deb-chip" id="debChip" style="display:none"></div>
         </div>
-        <!-- Il livello: sta accanto al numero perch&eacute; &egrave; l&rsquo;unica cosa
-             che cresce guardando il numero tutti i giorni. -->
         <div class="dx">
           <!-- Quello che hai deciso di recuperare oggi: sta qui perch&eacute;
                &egrave; una cosa da fare oggi, non un archivio. -->
@@ -119,16 +117,67 @@
       </div>
       <div class="state">
         <div class="track"><i id="stateBar" style="width:0%"></i></div>
-        <div class="lb" id="stateLb">—</div>
+        <div class="lb" id="stateLb">&mdash;</div>
       </div>
       <div class="carry" id="carry" style="display:none"></div>
-      <button class="link" id="tcalc">come l'ho calcolato →</button>
-      <!-- IL PERCORSO DEI GRADI &mdash; sta SOTTO il blocco del numero, mai
-           dentro. Il numero, la sua barra e &ldquo;come l&rsquo;ho calcolato&rdquo; sono un
-           pezzo solo: non ci si infila niente in mezzo. Ed &egrave; una cosa da
-           guardare di sfuggita, non una cosa da fare oggi: per questo
-           esce dalla colonna destra, dove resta solo il recupero. -->
-      <div class="percorso" id="premioBox" style="display:none"></div>
+
+      <!-- LA COSTANZA, in alto. E' il principio del prodotto e non
+           compariva sulla schermata principale: stava sepolta nei
+           Premi. I dati sono gli stessi, cambia solo dove si vedono. -->
+      <div class="costanza" id="costanza" hidden></div>
+
+      <h3>Registra</h3>
+      <div class="card">
+        <p class="hint">Un alimento per volta.</p>
+        <div class="field">
+          <div class="wrap">
+            <input id="food" placeholder="300 g petto di pollo crudo" autocomplete="off">
+            <button class="mic" id="mic" title="Detta col microfono">
+              <svg viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>
+            </button>
+          </div>
+          <button class="btn" id="addFood">Calcola</button>
+          <div class="sugg" id="sugg"></div>
+        </div>
+        <button class="amano" id="aMano">Metti i numeri a mano</button>
+        <!-- Le letture rimaste. Sul computer stanno nella barra a lato;
+             sul telefono quella barra non c'&egrave;, e senza questa riga
+             l'utente scopriva il limite solo sbattendoci contro. -->
+        <div class="letture" id="lettureRow"></div>
+        <ul class="meals" id="meals">
+        </ul>
+        <div class="left">Restano <b id="left">&mdash;</b> kcal
+          <small hidden>Hai mangiato <span id="eaten">0</span> di <span id="targetSmall">&mdash;</span> kcal</small>
+        </div>
+      </div>
+
+      <!-- LA CTA DELLA SCHERMATA. Fuori dalla card del cibo: dentro
+           faceva a botte con "Calcola". Qui &egrave; l'unica azione piena
+           della pagina. -->
+      <button class="btn chiudi-oggi" id="closeDay">Chiudi la giornata</button>
+      <div class="sent" id="closedMsg"></div>
+
+      <!-- L'allenamento che Strava ha trovato: compare solo se c'è,
+           e non entra nella giornata senza un tocco. -->
+      <div id="stravaOggi"></div>
+
+      <h3>Macro</h3>
+      <div class="row">
+        <div class="stat"><div class="k">Proteine</div><div class="v"><span id="macroP">0</span><small>g</small></div></div>
+        <div class="stat"><div class="k">Carboidrati</div><div class="v"><span id="macroC">0</span><small>g</small></div></div>
+        <div class="stat"><div class="k">Grassi</div><div class="v"><span id="macroG">0</span><small>g</small></div></div>
+      </div>
+
+      <h3>La giornata</h3>
+      <div class="grp">
+        <div class="g-row" id="rowWeight"><div class="t"><b>Peso di oggi</b><span id="weightSub">Non l'hai ancora messo</span></div><span class="val" id="weightVal">—</span></div>
+        <div class="g-row" id="rowNotes"><div class="t"><b>Note</b><span id="notesSub">Cos'è successo oggi</span></div><span class="val" id="notesVal">—</span></div>
+      </div>
+
+      <!-- DA QUI IN GI&Ugrave;: avanzate. Servono, ma non servono adesso.
+           Prima stavano sopra al cibo, cio&egrave; fra te e la cosa per cui
+           hai aperto l'app. -->
+      <button class="link" id="tcalc">Come l&rsquo;ho calcolato</button>
       <div class="calc" id="calc">
         <div class="ingr" style="margin:0 0 18px"><div><span>Metabolismo</span><em id="ingBmr">—</em></div><div><span>Movimento</span><em id="ingMove">—</em></div><div><span>Allenamento</span><em id="ingTrain">—</em></div></div>
         <p id="calc1"></p>
@@ -155,50 +204,7 @@
         </div>
         <div class="foot2">Oltre il 99% non si va.</div>
       </div>
-
-      <!-- L'allenamento che Strava ha trovato: compare solo se c'è,
-           e non entra nella giornata senza un tocco. -->
-      <div id="stravaOggi"></div>
-
-      <h3>Macro di oggi</h3>
-      <div class="row">
-        <div class="stat"><div class="k">Proteine</div><div class="v"><span id="macroP">0</span><small>g</small></div></div>
-        <div class="stat"><div class="k">Carboidrati</div><div class="v"><span id="macroC">0</span><small>g</small></div></div>
-        <div class="stat"><div class="k">Grassi</div><div class="v"><span id="macroG">0</span><small>g</small></div></div>
-      </div>
-
-      <h3>Cosa hai mangiato</h3>
-      <div class="card">
-        <h2>Cosa hai mangiato</h2>
-        <p class="hint">Un alimento per volta: <code>300 g petto di pollo crudo</code></p>
-        <div class="field">
-          <div class="wrap">
-            <input id="food" placeholder="300 g petto di pollo crudo" autocomplete="off">
-            <button class="mic" id="mic" title="Detta col microfono">
-              <svg viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>
-            </button>
-          </div>
-          <button class="btn" id="addFood">Calcola</button>
-          <div class="sugg" id="sugg"></div>
-        </div>
-        <button class="amano" id="aMano">Ho gi&agrave; i numeri: inseriscili a mano</button>
-        <!-- Le letture rimaste. Sul computer stanno nella barra a lato;
-             sul telefono quella barra non c'&egrave;, e senza questa riga
-             l'utente scopriva il limite solo sbattendoci contro. -->
-        <div class="letture" id="lettureRow"></div>
-        <ul class="meals" id="meals">
-        </ul>
-        <div class="left">Ti restano <b id="left">—</b> kcal
-          <small>Hai mangiato <span id="eaten">0</span> di <span id="targetSmall">—</span> kcal</small>
-        </div>
-        <button class="btn" id="closeDay" style="width:100%;margin-top:18px">Chiudi la giornata</button>
-        <div class="sent" id="closedMsg"></div>
-      </div>
-      <h3>La giornata</h3>
-      <div class="grp">
-        <div class="g-row" id="rowWeight"><div class="t"><b>Peso di oggi</b><span id="weightSub">Non l'hai ancora messo</span></div><span class="val" id="weightVal">—</span></div>
-        <div class="g-row" id="rowNotes"><div class="t"><b>Note</b><span id="notesSub">Cos'è successo oggi</span></div><span class="val" id="notesVal">—</span></div>
-      </div>
+      <div class="percorso" id="premioBox" style="display:none"></div>
     </section>
 
     <!-- ══ CICLO ══ -->
