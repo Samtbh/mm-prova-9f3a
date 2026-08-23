@@ -13,8 +13,8 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="apple-touch-icon" href="assets/logo-3d.png">
 <link rel="icon" href="assets/logo-3d.png">
-  <script type="module" crossorigin src="./assets/index-bNmtL2y6.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-B1LryvMO.css">
+  <script type="module" crossorigin src="./assets/index-CtdinDYa.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DIVze-Sw.css">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -103,30 +103,31 @@
 
     <!-- ══ OGGI ══ -->
     <section class="screen on" id="oggi">
-      <div class="eyebrow" id="oggiEyebrow">&mdash;</div>
+      <!-- LA TESTA DI OGGI. Il cerchietto della precisione sta qui, in
+           alto a destra: la stessa posizione dell'ingranaggio sul Ciclo.
+           Attaccato alla cifra era un pezzo del numero, e non lo e'.
+           (CEO 23/08) -->
+      <div class="head head-rot oggi-testa">
+        <div class="eyebrow" id="oggiEyebrow">&mdash;</div>
+        <button class="dial-num" id="precDial" aria-expanded="false"
+                aria-controls="prec" title="Quanto e&rsquo; preciso questo numero">
+          <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true"><circle class="bgc" cx="21" cy="21" r="18"/><circle class="fg" id="precRing" cx="21" cy="21" r="18" stroke-dasharray="0 113" stroke-linecap="round"/></svg>
+          <b id="precPct">&mdash;</b>
+        </button>
+      </div>
       <div class="numrow">
         <div class="numwrap">
-          <div class="num"><span id="numVal">&mdash;</span><span class="u">kcal</span>
-            <!-- LA PRECISIONE DEL NUMERO sta a fianco al numero, a destra,
-                 sul computer come sul telefono. Prima era una frase lunga
-                 in fondo alla pagina; adesso e' il cerchietto e basta, e
-                 se lo tocchi si apre la cascata dei dati che mancano.
-                 Sta dentro la riga del numero e non nella colonna di
-                 fianco, perche' sotto gli 860px quella colonna scende
-                 sotto il numero e il cerchietto se ne sarebbe andato con
-                 lei. (CEO 23/08) -->
-            <button class="dial dial-num" id="precDial" aria-expanded="false"
-                    aria-controls="prec" title="Quanto e&rsquo; preciso questo numero">
-              <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true"><circle class="bgc" cx="21" cy="21" r="18"/><circle class="fg" id="precRing" cx="21" cy="21" r="18" stroke-dasharray="0 113" stroke-linecap="round"/></svg>
-              <b id="precPct">&mdash;</b>
-            </button>
-          </div>
+          <div class="num"><span id="numVal">&mdash;</span><span class="u">kcal</span></div>
           <div class="deb-chip" id="debChip" style="display:none"></div>
         </div>
         <div class="dx">
           <!-- Quello che hai deciso di recuperare oggi: sta qui perch&eacute;
                &egrave; una cosa da fare oggi, non un archivio. -->
           <div class="oggi-alert" id="oggiAlert" style="display:none"></div>
+          <!-- LA LINEA DEI PREMI, a destra del numero. Stava in fondo alla
+               pagina, dopo lo scontrino e la precisione: cioe' dove non la
+               guardava nessuno. (CEO 23/08) -->
+          <div class="percorso" id="premioBox" style="display:none"></div>
         </div>
       </div>
       <div class="state">
@@ -214,7 +215,6 @@
         <p id="calc5"></p>
         <p id="calcTot"></p>
       </div>
-      <div class="percorso" id="premioBox" style="display:none"></div>
     </section>
 
     <!-- ══ CICLO ══ -->
