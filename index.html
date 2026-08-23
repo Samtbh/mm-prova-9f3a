@@ -13,7 +13,7 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="apple-touch-icon" href="assets/logo-3d.png">
 <link rel="icon" href="assets/logo-3d.png">
-  <script type="module" crossorigin src="./assets/index-CR9W2L_a.js"></script>
+  <script type="module" crossorigin src="./assets/index-Z029qSpu.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-BzX70f7P.css">
 </head>
 <body>
@@ -267,25 +267,32 @@
 
 
       <div class="sez" id="cic-andamento">
+      <!-- LA COSTANZA IN CIMA: è la schermata dei progressi, e il
+           progresso che conta e' quello. Stessi dati di Oggi. -->
+      <div class="costanza" id="costanzaCiclo" hidden></div>
       <div class="sum">
         <div class="stat"><div class="k">Giorni in pari</div><div class="v"><span id="stOk">—</span><small id="stTot"></small></div></div>
         <div class="stat"><div class="k">Recuperati</div><div class="v" id="stRec">—</div></div>
         <div class="stat"><div class="k">Media giornaliera</div><div class="v"><span id="stAvg">—</span><small>kcal</small></div></div>
       </div>
-      <div id="andamentoBox"></div>
       <h3>Il tuo livello</h3>
       <div id="premiBox"></div>
+      <h3>Il periodo</h3>
+      <div id="andamentoBox"></div>
 
       </div>
 
       <div class="sez" id="cic-archivio">
-      <h3>La prova</h3>
-      <div id="proofBox"></div>
       <h3>Ultimi giorni</h3>
       <div id="histFiltri"></div>
       <div class="hist" id="histList"></div>
       <h3>Il mese</h3>
       <div class="cal" id="histCal"></div>
+      <!-- LA PROVA sta in fondo: serve a chi vuole controllare che i
+           conti tornino, non a chi apre l'archivio per rivedere una
+           giornata. Informazione avanzata, quindi ultima. -->
+      <h3>La prova</h3>
+      <div id="proofBox"></div>
       </div>
     </section>
 
@@ -316,10 +323,10 @@
       <!-- LA LETTURA DEL PERIODO — il primo premio che apre una porta.
            Sta QUI, nella pagina che si chiama "La lettura": l'avevo messa
            in Ciclo, e in Ciclo non c'entra niente. -->
-      <h3 class="sez-t">La lettura del periodo</h3>
+      <h3 class="sez-t">Come funziona</h3>
       <p class="mn-p">MetaMap legge le tue giornate chiuse e dice cosa cambiare.
         Si apre al terzo grado, e la prima &egrave; in regalo.</p>
-      <button class="line" id="periodoVai">Leggi il mio periodo</button>
+      <button class="btn" id="periodoVai">Leggi il periodo</button>
       <div id="periodoBox"></div>
     </section>
 
@@ -346,7 +353,6 @@
       <div class="head">
         <div class="eyebrow">Il tuo</div>
         <h1 id="accName">Account</h1>
-        <p class="purpose" id="accSub">Tutto quello che riguarda te: i tuoi dati, il ciclo, le connessioni, il piano.</p>
       </div>
 
       <h3>Il tuo corpo</h3>
@@ -414,7 +420,7 @@
         <h1>Protocolli</h1>
 
       </div>
-      <button class="btn" id="nuovoProtocollo">Nuovo protocollo</button>
+      <button class="btn" id="nuovoProtocollo">Scrivi protocollo</button>
       <div id="protocolliBox"></div>
     </section>
 
