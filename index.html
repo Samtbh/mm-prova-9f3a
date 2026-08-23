@@ -13,8 +13,8 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="apple-touch-icon" href="assets/logo-3d.png">
 <link rel="icon" href="assets/logo-3d.png">
-  <script type="module" crossorigin src="./assets/index-CjoNceTr.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Bk0gcTvu.css">
+  <script type="module" crossorigin src="./assets/index-FEXnQLiP.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CUT6ehWF.css">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -420,27 +420,10 @@
 
     <!-- PIANI E TARIFFE -->
     <section class="screen" id="piani">
-      <div class="head"><div class="eyebrow">Account</div><h1>Scegli un piano.</h1></div>
-      <!-- ══ DA ATLETA A COACH ══
-           Il percorso che il CEO vuole spingere: chi si allena bene e
-           riceve domande può cominciare a seguire qualcuno. Qui NON si
-           promette un risultato ("troverai clienti"): si dice cosa
-           MetaMap ti mette già in mano da mostrare. Tre cose vere, che
-           esistono oggi. Compare solo a chi NON è già un professionista. -->
-      <div class="coach-box" id="coachBox" hidden>
-        <div class="cb-k">Da atleta a coach</div>
-        <h3 class="cb-t">Se ti chiedono come fai, hai gi&agrave; cosa mostrare.</h3>
-        <div class="cb-tre">
-          <div><b>Il protocollo scritto</b><span>Il tuo metodo scritto: obiettivo, ciclo, allenamenti. Lo legge lui, non se lo deve ricordare.</span></div>
-          <div><b>L&rsquo;archivio esportabile</b><span>Tutto in un file: allenamenti, giornate storte, adattamenti.</span></div>
-          <div><b>Previsto contro reale</b><span>Cosa avevi pianificato e cosa &egrave; successo davvero. &Egrave; la conversazione che vale.</span></div>
-        </div>
-        <p class="cb-p">Per seguire altre persone dentro MetaMap serve <b>Studio</b>: &egrave; l&rsquo;unico piano
-          con l&rsquo;uso commerciale autorizzato. Non ti promettiamo che troverai clienti &mdash;
-          quello dipende da te. Ti diamo lo strumento da mettergli davanti.</p>
-        <button class="line" id="coachVai">Guarda il piano Studio</button>
-      </div>
-
+      <!-- LA TESTA la scrive pianiTestaUI.ts: parte dal RISULTATO
+           dell'utente (i suoi giorni, non i nostri aggettivi) e solo
+           dopo arriva all'offerta. (brief CEO 22/08) -->
+      <div class="pt" id="pianiTesta"></div>
       <div class="billing" id="billing">
         <button class="on" data-bill="m">Mensile</button>
         <button data-bill="a">Annuale <span class="save">&minus;20%</span></button>
@@ -477,7 +460,7 @@
             <li><svg viewBox="0 0 24 24"><path d="M9.6 18.2 3.9 12.5a1.4 1.4 0 0 1 2-2l3.7 3.7 8.5-8.5a1.4 1.4 0 0 1 2 2l-9.5 9.5a1.4 1.4 0 0 1-2 0Z"/></svg><span>Ti ferma prima di salvare se i macro non tornano</span></li>
             <li><svg viewBox="0 0 24 24"><path d="M9.6 18.2 3.9 12.5a1.4 1.4 0 0 1 2-2l3.7 3.7 8.5-8.5a1.4 1.4 0 0 1 2 2l-9.5 9.5a1.4 1.4 0 0 1-2 0Z"/></svg><span>Vedi come stai andando a 7 e 30 giorni</span></li>
           </ul>
-          <div class="cta"><button class="fill" data-buy="Start">Attiva Start</button>
+          <div class="cta"><button class="line" data-buy="Start">Attiva Start</button>
             <div class="foot-note">Strava e le altre connessioni arrivano incluse. Senza aumenti.</div>
           </div>
         </div>
@@ -495,7 +478,7 @@
             <li><svg viewBox="0 0 24 24"><path d="M9.6 18.2 3.9 12.5a1.4 1.4 0 0 1 2-2l3.7 3.7 8.5-8.5a1.4 1.4 0 0 1 2 2l-9.5 9.5a1.4 1.4 0 0 1-2 0Z"/></svg><span>Cerchi in tutto l&rsquo;archivio ed esporti quando vuoi</span></li>
             <li><svg viewBox="0 0 24 24"><path d="M9.6 18.2 3.9 12.5a1.4 1.4 0 0 1 2-2l3.7 3.7 8.5-8.5a1.4 1.4 0 0 1 2 2l-9.5 9.5a1.4 1.4 0 0 1-2 0Z"/></svg><span>Confronti una settimana con l&rsquo;altra</span></li>
           </ul>
-          <div class="cta"><button class="line" data-buy="Pro">Attiva Pro</button>
+          <div class="cta"><button class="fill" data-buy="Pro">Attiva Pro</button>
             <div class="foot-note">Blocchi il prezzo di adesso. Le connessioni arrivano incluse.</div>
           </div>
         </div>
@@ -525,6 +508,22 @@
       <!-- ══ AGGIUNTE ══
            Profili e letture in pi&ugrave;, sul piano che hai gi&agrave;. Stavano
            scritte in fondo a una card come nota: nessuno le vedeva. -->
+      <!-- IL PERCORSO DA ATLETA A COACH sta DOPO i piani: e' una
+           strada che riguarda pochi, e stava davanti a tutti. -->
+      <div class="coach-box" id="coachBox" hidden>
+        <div class="cb-k">Da atleta a coach</div>
+        <h3 class="cb-t">Se ti chiedono come fai, hai gi&agrave; cosa mostrare.</h3>
+        <div class="cb-tre">
+          <div><b>Il protocollo scritto</b><span>Il tuo metodo scritto: obiettivo, ciclo, allenamenti. Lo legge lui, non se lo deve ricordare.</span></div>
+          <div><b>L&rsquo;archivio esportabile</b><span>Tutto in un file: allenamenti, giornate storte, adattamenti.</span></div>
+          <div><b>Previsto contro reale</b><span>Cosa avevi pianificato e cosa &egrave; successo davvero. &Egrave; la conversazione che vale.</span></div>
+        </div>
+        <p class="cb-p">Per seguire altre persone serve <b>Studio</b>: &egrave; l&rsquo;unico piano
+          con l&rsquo;uso commerciale autorizzato. I clienti li trovi tu. Noi ti diamo
+          lo strumento da mettergli davanti.</p>
+        <button class="line" id="coachVai">Guarda il piano Studio</button>
+      </div>
+
       <h3 id="aggiunte">Aggiungi al tuo piano</h3>
       <div class="addons">
         <div class="addon">
